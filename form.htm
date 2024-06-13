@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>臺北市社區疫苗接種系統管理後台</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css" />
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- header load header.htm -->
+      <header></header>
+      <!-- aside load aside.htm -->
+      <aside></aside>
+      <!-- 主要內容區 -->
+      <div class="content">
+        <!-- breadcrumb路徑 -->
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="light.htm">首頁</a></li>
+            <li><a href="#">節點</a></li>
+            <li>節點</li>
+          </ul>
+        </div>
+        <!-- gird section -->
+        <div class="grid">
+          <div class="container">
+            <div class="title">
+              <h2>新增場次</h2>
+            </div>
+            <!-- flex-12 -->
+            <div class="flex-12">
+              <div class="col">
+                <div class="_content">
+                  <div class="flex-form formbox">
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>標題：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <input name="" id="idname" type="text" value="請輸入標題" placeholder="請輸入標題" class="used" />
+                        </div>
+                        <div class="notice_info">前7碼請輸入設站日期（民國年），範例：1131001</div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>接種類型：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <div class="check_grp form_inline">
+                            <label><input name="" type="checkbox" value="" checked />肺鏈</label>
+                            <label><input name="" type="checkbox" value="" checked />流感</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>設站行政區：</label>
+                      <div class="form_content form_inline">
+                        <select name="" id="selectSample">
+                          <option value="">請選擇</option>
+                          <option value="">選項二</option>
+                          <option value="">選項三</option>
+                          <option value="">選項四</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>設站村里：</label>
+                      <div class="form_content form_inline">
+                        <select name="" id="selectSample">
+                          <option value="">請選擇</option>
+                          <option value="">選項二</option>
+                          <option value="">選項三</option>
+                          <option value="">選項四</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>設站地址：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <input name="" id="idname" type="text" value="請輸入設站地址" placeholder="請輸入設站地址" class="used" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>醫療院所：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect hasBtn">
+                          <select name="" id="selectSample">
+                            <option value="">請選擇</option>
+                            <option value="">選項二</option>
+                            <option value="">選項三</option>
+                            <option value="">選項四</option>
+                          </select>
+                          <button class="btn btn-primary btn-search"><i class="i_search"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp datepick">
+                      <label for="idname" class="form_title"><abbr>*</abbr>設站日期：</label>
+                      <div class="labelEffect">
+                        <input name="" type="date" value="" class="calendar used" style="max-width: 99%" />
+                        <!-- <button class="btn"><i class="i_calendar"></i></button> -->
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp datepick">
+                      <label for="idname" class="form_title"><abbr>*</abbr>設站日期：</label>
+                      <div class="startDate">
+                        <div class="labelEffect">
+                          <input name="" type="date" value="" class="calendar used" />
+                          <!-- <button class="btn"><i class="i_calendar"></i></button> -->
+                        </div>
+                      </div>
+                      <div class="endDate">
+                        <div class="labelEffect">
+                          <input name="" type="date" value="" class="calendar used" />
+                          <!-- <button class="btn"><i class="i_calendar"></i></button> -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp datepick">
+                      <label for="idname" class="form_title"><abbr>*</abbr>設站時段：</label>
+                      <div class="startDate">
+                        <div class="labelEffect">
+                          <input name="" type="time" value="" class="calendar used" />
+                          <!-- <button class="btn"><i class="i_calendar"></i></button> -->
+                        </div>
+                      </div>
+                      <div class="endDate">
+                        <div class="labelEffect">
+                          <input name="" type="time" value="" class="calendar used" />
+                          <!-- <button class="btn"><i class="i_calendar"></i></button> -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>報名名額上限：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <input name="" id="idname" type="text" value="請輸入報名名額上限" placeholder="請輸入報名名額上限" class="used" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title">疫苗批號：</label>
+                      <div class="form_content">
+                        <div class="tbbtn">
+                          <button class="btn"><i class="i_add invert"></i>疫苗批號</button>
+                        </div>
+
+                        <div class="labelEffect">
+                          <!-- 表格樣式2 -->
+                          <div class="table_wrapper">
+                            <table class="table_hover">
+                              <thead>
+                                <tr>
+                                  <th>序號</th>
+                                  <th class="text-left">疫苗類型</th>
+                                  <th class="text-left">廠牌批號</th>
+                                  <th>移除</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="text-center">1</td>
+                                  <td>央PPV</td>
+                                  <td>ABC001-CDC</td>
+                                  <td class="text-center">
+                                    <button class="btn">
+                                      <i class="i_close"></i>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-center">2</td>
+                                  <td>北PPV</td>
+                                  <td>ABC002-hb</td>
+                                  <td class="text-center">
+                                    <button class="btn">
+                                      <i class="i_close"></i>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-center">3</td>
+                                  <td>PCV13</td>
+                                  <td>DEF001-CDC</td>
+                                  <td class="text-center">
+                                    <button class="btn" disabled>
+                                      <i class="i_close"></i>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-center">4</td>
+                                  <td>流感</td>
+                                  <td>GHI001-CDC</td>
+                                  <td class="text-center">
+                                    <button class="btn">
+                                      <i class="i_close"></i>
+                                    </button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title">密碼：</label>
+                      <div class="form_content">
+                        <div class="tbbtn">
+                          <button class="btn"><i class="i_edit invert"></i>修改密碼</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>身分證統一編號/<br />統一證號：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <input name="" id="idname" type="text" value="A123456789" placeholder="A123456789" class="used" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp datepick">
+                      <label for="idname" class="form_title"><abbr>*</abbr>肺鏈疫苗<br />（北市）：</label>
+                      <div class="startDate">
+                        <div class="labelEffect">
+                          <input name="" type="text" value="63" placeholder="63" class="used" />
+                        </div>
+                      </div>
+                      <div class="endDate">
+                        <div class="labelEffect">
+                          <input name="" type="text" value="64" placeholder="64" class="used" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>匯入類別：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <div class="radio_grp">
+                            <label><input name="radioSample" type="radio" value="" checked />活動場次<a href="#">活動場次檔案範本</a></label>
+                            <label><input name="radioSample" type="radio" value="" />機關人員<a href="#">機關人員檔案範本</a></label>
+                            <label><input name="radioSample" type="radio" value="" />醫療人員<a href="#">醫療人員檔案範本</a></label>
+                            <label><input name="radioSample" type="radio" value="" />醫療院所<a href="#">醫療院所檔案範本</a></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>匯入檔案：</label>
+                      <div class="form_content">
+                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>狀態：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <div class="radio_grp form_inline">
+                            <label><input name="radioSample" type="radio" value="啟用" checked />啟用</label>
+                            <label><input name="radioSample" type="radio" value="停用" />停用</label>
+                            <label><input name="radioSample" type="radio" value="鎖定" />鎖定</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>建立單位：</label>
+                      <div class="form_content form_inline">
+                        <select name="" id="selectSample">
+                          <option value="">臺北市政府衛生局</option>
+                          <option value="">選項二</option>
+                          <option value="">選項三</option>
+                          <option value="">選項四</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>建立單位：</label>
+                      <div class="form_content form_inline">
+                        <select name="" id="selectSample" disabled>
+                          <option value="">臺北市政府衛生局</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>最後編修人員：</label>
+                      <div class="form_content form_inline">
+                        <div class="tc">張妮可(nicole)</div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>最後編修時間：</label>
+                      <div class="form_content form_inline">
+                        <div class="tc">1130220 17:29:52</div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                  </div>
+                  <div class="btn_grp">
+                    <button class="btn">返回列表</button>
+                    <button class="btn">刪除</button>
+                    <button class="btn btn-primary">存檔</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- flex-12 end-->
+          </div>
+        </div>
+      </div>
+      <!-- footer Start -->
+      <footer>
+        <p>版權所有 臺北市政府衛生局　 地址：110204 臺北市信義區市府路1號</p>
+      </footer>
+    </div>
+
+    <!-- JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <script>
+      $('header').load('header.htm');
+      $('aside').load('aside.htm');
+    </script>
+  </body>
+</html>

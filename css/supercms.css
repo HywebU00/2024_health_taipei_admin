@@ -3846,6 +3846,29 @@ img.img-responsive {
     transform: scale(2);
   }
 }
+body {
+  overflow: auto;
+  scrollbar-color: #666 rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #666;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
 .dropdown-content {
   display: block;
   right: 0;
@@ -10276,6 +10299,7 @@ h2.title {
   position: relative;
   margin: 0 auto;
   padding: 0;
+  z-index: 999;
 }
 .login_wrapper h1 .pic {
   position: absolute;
@@ -10324,6 +10348,27 @@ h2.title {
   .login {
     width: 100%;
     margin: 70px auto 3%;
+  }
+}
+.login:before {
+  content: "";
+  width: 240px;
+  height: 140px;
+  background: url(../images/addimg.png) no-repeat center center;
+  background-size: 90% auto;
+  position: absolute;
+  top: -80px;
+  right: 0;
+}
+@media screen and (max-width: 767px) {
+  .login:before {
+    background: url(../images/addimg.png) no-repeat center center;
+    background-size: 70% auto;
+  }
+}
+@media screen and (max-width: 575px) {
+  .login:before {
+    display: none;
   }
 }
 .login h3 {

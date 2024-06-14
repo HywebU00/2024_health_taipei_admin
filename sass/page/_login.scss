@@ -37,6 +37,7 @@
     position: relative;
     margin: 0 auto;
     padding: 0;
+    z-index: 999;
     .pic {
       // flex: 1 1 100%;
       // height: 60px;
@@ -85,7 +86,23 @@
     width: 100%;
     margin: 70px auto 3%;
   }
-
+  &:before {
+    content: '';
+    width: 240px;
+    height: 140px;
+    background: url(../images/addimg.png) no-repeat center center;
+    background-size: 90% auto;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    @include screen('mobile') {
+      background: url(../images/addimg.png) no-repeat center center;
+      background-size: 70% auto;
+    }
+    @include screen('xs_mobile') {
+      display: none;
+    }
+  }
   h3 {
     margin: 0.5em;
     text-align: left;

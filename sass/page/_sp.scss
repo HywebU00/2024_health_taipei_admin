@@ -196,6 +196,9 @@
 }
 .formbox {
   margin: 1em 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  padding: 2em;
 
   .form_grp {
     border-bottom: solid 1px #dadfe9;
@@ -203,7 +206,9 @@
     padding: 0.5em;
   }
   @include screen('mobile') {
-    margin: 1em 0;
+    margin: 1em 2%;
+    padding: 1em 0.5em;
+    width: 96% !important;
   }
   .table_wrapper {
     width: 100%;

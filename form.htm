@@ -16,6 +16,8 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/github-gist.css" />
+    <!-- fancybox -->
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
   </head>
 
   <body>
@@ -179,7 +181,7 @@
                       <label for="idname" class="form_title">疫苗批號：</label>
                       <div class="form_content">
                         <div class="tbbtn">
-                          <button class="btn"><i class="i_add invert"></i>疫苗批號</button>
+                          <button class="btn" data-fancybox="" data-type="iframe" data-src="i_number_query.htm"><i class="i_add invert"></i>疫苗批號</button>
                         </div>
 
                         <div class="labelEffect">
@@ -247,7 +249,7 @@
                       <label for="idname" class="form_title">密碼：</label>
                       <div class="form_content">
                         <div class="tbbtn">
-                          <button class="btn"><i class="i_edit invert"></i>修改密碼</button>
+                          <button class="btn" data-fancybox="" data-type="iframe" data-src="i_pw_modify.htm"><i class="i_edit invert"></i>修改密碼</button>
                         </div>
                       </div>
                     </div>
@@ -379,6 +381,8 @@
     <script src="js/customize.js"></script>
     <!-- highlight -->
     <script src="vendor/highlight/highlight.pack.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <script>
       $('header').load('header.htm');
       $('aside').load('aside.htm');

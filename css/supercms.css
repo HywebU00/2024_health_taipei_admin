@@ -1856,17 +1856,6 @@ select::-ms-expand {
   padding: 0.6em 0.5em 0.1em;
   transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.labelEffect > label:before, .labelEffect > label:after {
-  content: "";
-  display: block;
-  width: 0%;
-  left: 50%;
-  position: absolute;
-  bottom: -2px;
-  height: 2px;
-  background: #21baff;
-  transition: 0.2s ease all;
-}
 .labelEffect input,
 .labelEffect textarea,
 .labelEffect select {
@@ -2770,12 +2759,12 @@ select[readonly],
 select[disabled] {
   background: url(../images/basic/icon_select_arrow.svg) no-repeat right center #ddffbf;
   background-size: 20px;
-  color: #666;
+  color: #333;
   cursor: not-allowed;
 }
 select[readonly] ~ label,
 select[disabled] ~ label {
-  color: #666;
+  color: #333;
 }
 .btn[readonly],
 .btn[disabled] {
@@ -10273,16 +10262,6 @@ h2.title {
   left: 0;
   z-index: 0;
 }
-.login_wrapper .bg_img:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #1f245a;
-  opacity: 0.4;
-  content: "";
-}
 .login_wrapper .bg_img img {
   width: 100%;
   height: 100%;
@@ -10291,85 +10270,169 @@ h2.title {
 .login_wrapper .bg_img.hidden {
   display: none;
 }
+.login_wrapper h1 {
+  width: 100%;
+  max-width: 1162px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+.login_wrapper h1 .pic {
+  position: absolute;
+  z-index: 99;
+  left: 50px;
+  top: 30px;
+}
+.login_wrapper h1 .pic img {
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+@media screen and (max-width: 767px) {
+  .login_wrapper h1 .pic {
+    top: 20px;
+    left: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .login_wrapper h1 .pic {
+    top: 25px;
+    width: 100%;
+    left: 5%;
+  }
+}
 
 .login {
   position: relative;
   z-index: 99;
-  background: #FFF;
-  box-shadow: 0px 6px 15px -13px rgba(0, 0, 0, 0.6);
-  border-radius: 0.5em;
-  width: 380px;
-  margin: 3% auto;
+  background: url(../images/loginbg2.png) no-repeat center top;
+  background-size: auto 100%;
+  max-width: 1162px;
+  width: 90%;
+  margin: 80px auto 3%;
   left: auto;
-  min-height: 400px;
-  padding: 1em 2em 5em;
+  min-height: 594px;
+  padding: 2em 2em 3em;
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
   animation-duration: 0.6s;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .login {
-    width: 90%;
+    width: 100%;
+    margin: 70px auto 3%;
   }
 }
-.login h1 {
-  margin: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-  padding-bottom: 0.25em;
-  border-bottom: 1px solid #DDD;
-}
-.login h1 .pic {
+.login h3 {
+  margin: 0.5em;
+  text-align: left;
+  font-size: 1.25em;
+  color: #333;
+  border-left: solid 5px #c00;
   flex: 1 1 100%;
-  height: 60px;
-  display: flex;
+  padding-left: 0.5em;
 }
-.login h1 .pic img {
-  max-height: 100%;
-  max-width: 80%;
-  margin: 0 auto;
-  object-fit: contain;
+.login .flex-form {
+  width: 335px;
+  position: absolute;
+  right: 150px;
+  top: 150px;
 }
-.login h1 span {
-  flex: 0 1 100%;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  text-align: center;
+@media screen and (max-width: 767px) {
+  .login .flex-form {
+    width: 90%;
+    right: 5%;
+    left: 4%;
+    top: 80px;
+  }
 }
 .login .form_content {
   border: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-size: 0.813rem;
 }
 .login .btn_grp {
-  width: 100%;
-  margin-top: 1em;
+  width: 98.5%;
+  margin-top: -1em;
+  margin-bottom: 0.5em;
+  margin-left: 1.5%;
+}
+@media screen and (max-width: 767px) {
+  .login .btn_grp {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .login .btn_grp .btn {
   width: 100%;
   margin: 0 auto;
   display: block;
+  font-size: 1rem;
+  background: #333a93;
+  border: solid 1px #333a93;
+  color: #fff;
+  padding: 0.5em 0.2em;
+}
+.login .btn_grp .btn:hover, .login .btn_grp .btn:focus {
+  background: #262b6d;
+  color: #fff;
+}
+.login .btn_grp .btn-primary {
+  background: #333a93;
+}
+.login .btn_grp .btn-primary:hover, .login .btn_grp .btn-primary:focus {
+  background: #262b6d;
 }
 .login .contact {
-  position: absolute;
-  font-size: 0.75rem;
-  color: #888;
-  bottom: 1em;
-  left: 10%;
-  width: 80%;
+  color: #333;
   line-height: 1.4;
+  margin-left: 1.5%;
+  width: 100%;
+}
+.login .contact .forget {
   text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
 }
 .login .contact p {
   margin: 0;
   padding: 0;
+  font-size: 0.938rem;
+}
+.login .contact a {
+  text-decoration: underline;
+  display: inline-block;
+}
+.login .contact a:hover {
+  text-decoration: none;
+}
+.login input[type=text] {
+  background: #fff;
+}
+.login input[type=password] {
+  background: #fff;
+}
+.login .btn-icon {
+  border: none;
+  top: 0;
+}
+.login [class^=i_]:before {
+  height: 1em;
+  width: 1em;
+}
+.login .i_reload {
+  margin-left: 0.1em !important;
+}
+.login .i_reload::before {
+  margin-top: -0.5em;
+}
+.login .int_box {
+  margin: 0 0 1em 1.5%;
+  flex: 1 1 100%;
 }
 
 @keyframes fadeInOpacity {

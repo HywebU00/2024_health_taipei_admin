@@ -66,15 +66,15 @@ select::-ms-expand {
     transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
     &:before,
     &:after {
-      content: '';
-      display: block;
-      width: 0%;
-      left: 50%;
-      position: absolute;
-      bottom: -2px;
-      height: 2px;
-      background: lighten($form-focus, 0);
-      transition: 0.2s ease all;
+      // content: '';
+      // display: block;
+      // width: 0%;
+      // left: 50%;
+      // position: absolute;
+      // bottom: -2px;
+      // height: 2px;
+      // background: lighten($form-focus, 0);
+      // transition: 0.2s ease all;
     }
   }
   input,
@@ -851,10 +851,10 @@ select[readonly],
 select[disabled] {
   background: url(../images/basic/icon_select_arrow.svg) no-repeat right center #ddffbf;
   background-size: 20px;
-  color: #666;
+  color: #333;
   cursor: not-allowed;
   & ~ label {
-    color: #666;
+    color: #333;
   }
   &:hover,
   &:focus-visible {

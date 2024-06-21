@@ -10796,22 +10796,14 @@ h2.title {
   margin-bottom: 0;
 }
 
-.pdf {
-  width: 794px;
-  height: 1110px;
-  page-break-after: always;
-  background: #fff;
-  margin: 20px auto;
-  padding: 1.5em 2em;
-  font-family: 標楷體;
-  position: relative;
-  border: solid 1px #666;
+.checklist {
+  margin: 0 1em;
+  font-size: 0.938em;
 }
-.pdf .cptable {
-  box-shadow: none;
-  border-radius: 0;
-  margin: 1em 0;
-  padding: 0;
+.checklist img {
+  width: 1em;
+  vertical-align: middle;
+  margin-right: 0.5em;
 }
 
 @media print {

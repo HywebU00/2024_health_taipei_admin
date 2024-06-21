@@ -4162,12 +4162,13 @@ html {
 .PDF table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 1rem;
 }
 .PDF table tr th,
 .PDF table tr td {
   border: 1px solid #666;
   border-bottom: 0;
-  padding: 0.25em 0.5em;
+  padding: 0.05em 0.5em;
 }
 .PDF table tr th span,
 .PDF table tr td span {
@@ -4403,10 +4404,43 @@ html {
   padding: 0.5em 1em;
   float: right;
 }
+.PDF .cptable {
+  margin-top: 0;
+  padding: 0;
+  box-shadow: none;
+}
+.PDF .sing {
+  width: 120px;
+  margin: 2px 0 0 0;
+}
+.PDF .cptable .f_title {
+  font-size: 1.25em;
+  padding: 0.4em 0.8em 0.4em 4em;
+}
+.cptable .f_title .step {
+  padding: 0.2em 0.5em;
+}
 
 @media print {
   .PDF input[type='checkbox']:checked {
     box-shadow: inset #0066cc 0 0 0 16px;
+  }
+  .PDF .cptable .f_title {
+    background: #ccc !important;
+  }
+  .PDF .cptable .f_title .step {
+    background: #fff !important;
+    color: #000;
+  }
+  .PDF .cptable .f_title .tt {
+    color: #000 !important;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .PDF .cptable .f_title .time {
+    color: #000 !important;
+    font-weight: 600;
+    display: inline-block;
   }
 }
 html {

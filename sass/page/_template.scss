@@ -797,6 +797,20 @@ body {
       }
       .dropdown-content {
         min-width: 15em;
+        button {
+          text-align: left;
+          i {
+            filter: invert(0);
+          }
+          &:hover,
+          &:focus {
+            background: $aHover;
+            border: 1px solid $aHover !important;
+            i {
+              filter: invert(100%);
+            }
+          }
+        }
       }
     }
   }

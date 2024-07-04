@@ -7221,6 +7221,31 @@ body.dark {
 .publish_block ._head .quick_btn .dropdown-content {
   min-width: 15em;
 }
+.content_block ._head .quick_btn .dropdown-content button,
+.widget_block ._head .quick_btn .dropdown-content button,
+.publish_block ._head .quick_btn .dropdown-content button {
+  text-align: left;
+}
+.content_block ._head .quick_btn .dropdown-content button i,
+.widget_block ._head .quick_btn .dropdown-content button i,
+.publish_block ._head .quick_btn .dropdown-content button i {
+  filter: invert(0);
+}
+.content_block ._head .quick_btn .dropdown-content button:hover, .content_block ._head .quick_btn .dropdown-content button:focus,
+.widget_block ._head .quick_btn .dropdown-content button:hover,
+.widget_block ._head .quick_btn .dropdown-content button:focus,
+.publish_block ._head .quick_btn .dropdown-content button:hover,
+.publish_block ._head .quick_btn .dropdown-content button:focus {
+  background: #0082a7;
+  border: 1px solid #0082a7 !important;
+}
+.content_block ._head .quick_btn .dropdown-content button:hover i, .content_block ._head .quick_btn .dropdown-content button:focus i,
+.widget_block ._head .quick_btn .dropdown-content button:hover i,
+.widget_block ._head .quick_btn .dropdown-content button:focus i,
+.publish_block ._head .quick_btn .dropdown-content button:hover i,
+.publish_block ._head .quick_btn .dropdown-content button:focus i {
+  filter: invert(100%);
+}
 .content_block ._content,
 .widget_block ._content,
 .publish_block ._content {

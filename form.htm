@@ -60,12 +60,36 @@
                     <!-- form_grp end-->
                     <!-- form_grp star-->
                     <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>標題：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <input name="" id="idname" type="text" value="請輸入標題" placeholder="請輸入標題" class="used" disabled />
+                        </div>
+                        <div class="notice_info">前7碼請輸入設站日期（民國年），範例：1131001</div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
                       <label for="idname" class="form_title"><abbr>*</abbr>接種類型：</label>
                       <div class="form_content form_inline">
                         <div class="labelEffect">
                           <div class="check_grp form_inline">
                             <label><input name="" type="checkbox" value="" checked />肺鏈</label>
-                            <label><input name="" type="checkbox" value="" checked />流感</label>
+                            <label><input name="" type="checkbox" value="" />流感</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- form_grp end-->
+                    <!-- form_grp star-->
+                    <div class="form_grp">
+                      <label for="idname" class="form_title"><abbr>*</abbr>接種類型：</label>
+                      <div class="form_content form_inline">
+                        <div class="labelEffect">
+                          <div class="check_grp form_inline">
+                            <label><input name="" type="checkbox" value="" checked disabled />肺鏈</label>
+                            <label><input name="" type="checkbox" value="" disabled />流感</label>
                           </div>
                         </div>
                       </div>
@@ -182,6 +206,7 @@
                       <div class="form_content">
                         <div class="tbbtn">
                           <button class="btn" data-fancybox="" data-type="iframe" data-src="i_number_query.htm"><i class="i_add invert"></i>疫苗批號</button>
+                          <button class="btn" data-fancybox="" data-type="iframe" data-src="i_number_query.htm" disabled><i class="i_add invert"></i>疫苗批號</button>
                         </div>
 
                         <div class="labelEffect">
@@ -250,13 +275,14 @@
                       <div class="form_content">
                         <div class="tbbtn">
                           <button class="btn" data-fancybox="" data-type="iframe" data-src="i_pw_modify.htm"><i class="i_edit invert"></i>修改密碼</button>
+                          <button class="btn" data-fancybox="" data-type="iframe" data-src="i_pw_modify.htm" disabled><i class="i_edit invert"></i>修改密碼</button>
                         </div>
                       </div>
                     </div>
                     <!-- form_grp end-->
                     <!-- form_grp star-->
                     <div class="form_grp">
-                      <label for="idname" class="form_title"><abbr>*</abbr>身分證統一編號/<br />統一證號：</label>
+                      <label for="idname" class="form_title"><abbr>*</abbr>身分證統一編號/統一證號：</label>
                       <div class="form_content form_inline">
                         <div class="labelEffect">
                           <input name="" id="idname" type="text" value="A123456789" placeholder="A123456789" class="used" />
@@ -266,7 +292,7 @@
                     <!-- form_grp end-->
                     <!-- form_grp star-->
                     <div class="form_grp datepick">
-                      <label for="idname" class="form_title"><abbr>*</abbr>肺鏈疫苗<br />（北市）：</label>
+                      <label for="idname" class="form_title"><abbr>*</abbr>肺鏈疫苗（長者PCV13）：</label>
                       <div class="startDate">
                         <div class="labelEffect">
                           <input name="" type="text" value="63" placeholder="63" class="used" />
@@ -285,7 +311,7 @@
                       <div class="form_content form_inline">
                         <div class="labelEffect">
                           <div class="radio_grp">
-                            <label><input name="radioSample" type="radio" value="" checked />活動場次<a href="#">活動場次檔案範本</a></label>
+                            <label><input name="radioSample" type="radio" value="" />活動場次<a href="#">活動場次檔案範本</a></label>
                             <label><input name="radioSample" type="radio" value="" />機關人員<a href="#">機關人員檔案範本</a></label>
                             <label><input name="radioSample" type="radio" value="" />醫療人員<a href="#">醫療人員檔案範本</a></label>
                             <label><input name="radioSample" type="radio" value="" />醫療院所<a href="#">醫療院所檔案範本</a></label>
@@ -308,7 +334,7 @@
                       <div class="form_content form_inline">
                         <div class="labelEffect">
                           <div class="radio_grp form_inline">
-                            <label><input name="radioSample" type="radio" value="啟用" checked />啟用</label>
+                            <label><input name="radioSample" type="radio" value="啟用" checked disabled />啟用</label>
                             <label><input name="radioSample" type="radio" value="停用" />停用</label>
                             <label><input name="radioSample" type="radio" value="鎖定" />鎖定</label>
                           </div>

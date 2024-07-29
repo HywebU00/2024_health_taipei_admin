@@ -305,12 +305,12 @@ select::-ms-expand {
     }
     .startDate,
     .endDate {
-      flex: 0 1 calc(50% - 7em);
+      flex: 0 1 calc(50% - 10em);
       position: relative;
       flex-grow: 0;
       flex-shrink: 1;
-      flex-basis: calc(50% - 7em);
-      max-width: calc(50% - 7em);
+      flex-basis: calc(50% - 10em);
+      max-width: calc(50% - 10em);
       @include screen('mobile') {
         flex: 0 1 calc(50% - 1em);
         flex-basis: calc(50% - 1em);
@@ -354,10 +354,11 @@ select::-ms-expand {
     // left: 0em;
     font-size: 1.125em;
     min-width: 9em;
-    max-width: 9em;
+    // max-width: 9em;
     justify-content: flex-end;
     word-break: break-all;
     padding: 0.5em 0;
+    white-space: nowrap;
 
     @include screen('mobile') {
       flex: 1 1 100%;
@@ -829,21 +830,51 @@ input[type='checkbox']:checked {
   box-shadow: $form-btn 0 0 0 1px;
   @include border-radius(2px);
 }
+input[type='checkbox']:disabled {
+  background: #ddffbf;
+  cursor: not-allowed;
+}
+input[type='checkbox']:checked:disabled {
+  background: #ddffbf url(../images/basic/icon_checked2.svg) no-repeat center center;
+  background-size: 98%;
+  box-shadow: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: not-allowed;
+  &:hover,
+  &:focus-visible {
+    background: #ddffbf url(../images/basic/icon_checked2.svg) no-repeat center center !important;
+    background-size: 98%;
+    background: #ddffbf;
+  }
+}
 input[type='radio']:checked {
   box-shadow: #fff 0 0 0 2px inset, $form-btn 0 0 0 1px;
+  border-color: $form-btn;
+  background-color: $form-btn;
+  outline: none;
 }
+input[type='radio']:checked:disabled {
+  box-shadow: #fff 0 0 0 2px inset, #bbb 0 0 0 1px;
+  border-color: #bbb;
+  background-color: #bbb;
+  outline: none;
+  cursor: not-allowed;
+}
+
 //---------------------------------------------readonly disable -------//
 input[readonly],
 input[disabled] {
-  background: url(../images/basic/icon_select_arrow.svg) no-repeat right center #ddffbf;
+  background: #ddffbf;
   background-size: 20px;
   color: #666;
-  cursor: not-allowed;
+  cursor: not-allowed !important;
   & ~ label {
     color: #666;
   }
   &:hover,
   &:focus-visible {
+    background: #ddffbf;
   }
 }
 

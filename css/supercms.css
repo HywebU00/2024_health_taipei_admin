@@ -2084,12 +2084,12 @@ select::-ms-expand {
 }
 .flex-form .datepick .startDate,
 .flex-form .datepick .endDate {
-  flex: 0 1 calc(50% - 7em);
+  flex: 0 1 calc(50% - 10em);
   position: relative;
   flex-grow: 0;
   flex-shrink: 1;
-  flex-basis: calc(50% - 7em);
-  max-width: calc(50% - 7em);
+  flex-basis: calc(50% - 10em);
+  max-width: calc(50% - 10em);
 }
 @media screen and (max-width: 767px) {
   .flex-form .datepick .startDate,
@@ -2130,10 +2130,10 @@ select::-ms-expand {
 .flex-form .form_title {
   font-size: 1.125em;
   min-width: 9em;
-  max-width: 9em;
   justify-content: flex-end;
   word-break: break-all;
   padding: 0.5em 0;
+  white-space: nowrap;
 }
 @media screen and (max-width: 767px) {
   .flex-form .form_title {
@@ -2740,21 +2740,57 @@ input[type=checkbox]:checked {
   border-radius: 2px;
 }
 
+input[type=checkbox]:disabled {
+  background: #ddffbf;
+  cursor: not-allowed;
+}
+
+input[type=checkbox]:checked:disabled {
+  background: #ddffbf url(../images/basic/icon_checked2.svg) no-repeat center center;
+  background-size: 98%;
+  box-shadow: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+input[type=checkbox]:checked:disabled:hover, input[type=checkbox]:checked:disabled:focus-visible {
+  background: #ddffbf url(../images/basic/icon_checked2.svg) no-repeat center center !important;
+  background-size: 98%;
+  background: #ddffbf;
+}
+
 input[type=radio]:checked {
   box-shadow: #fff 0 0 0 2px inset, #333 0 0 0 1px;
+  border-color: #333;
+  background-color: #333;
+  outline: none;
+}
+
+input[type=radio]:checked:disabled {
+  box-shadow: #fff 0 0 0 2px inset, #bbb 0 0 0 1px;
+  border-color: #bbb;
+  background-color: #bbb;
+  outline: none;
+  cursor: not-allowed;
 }
 
 input[readonly],
 input[disabled] {
-  background: url(../images/basic/icon_select_arrow.svg) no-repeat right center #ddffbf;
+  background: #ddffbf;
   background-size: 20px;
   color: #666;
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 input[readonly] ~ label,
 input[disabled] ~ label {
   color: #666;
 }
+input[readonly]:hover, input[readonly]:focus-visible,
+input[disabled]:hover,
+input[disabled]:focus-visible {
+  background: #ddffbf;
+}
+
 select[readonly],
 select[disabled] {
   background: url(../images/basic/icon_select_arrow.svg) no-repeat right center #ddffbf;
@@ -10781,6 +10817,7 @@ h2.title {
 
 .tc {
   margin: 0.5em;
+  font-size: 1.125em;
 }
 
 .sing {

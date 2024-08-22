@@ -17,7 +17,8 @@
     <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/github-gist.css" />
     <!-- fancybox -->
-    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <!-- <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" /> -->
+    <link rel="stylesheet" href="vendor/fancybox/fancybox.css" />
   </head>
 
   <body>
@@ -197,7 +198,9 @@
                         <thead>
                           <tr>
                             <th><input type="checkbox" /></th>
-                            <th>序號</th>
+                            <th>
+                              <a href="#">序號 <i class="i_sort"></i></a>
+                            </th>
                             <th class="main_data">標題</th>
                             <th class="text-left">接種類型</th>
                             <th>設站行政區</th>
@@ -416,7 +419,9 @@
                             <th class="text-left">場次</th>
                             <th>設站日期</th>
                             <th>報名日期</th>
-                            <th>報名序號</th>
+                            <th>
+                              <a href="#">報名序號<i class="i_sort"></i></a>
+                            </th>
                             <th>報名方式</th>
                             <th>詳情</th>
                           </tr>
@@ -536,7 +541,14 @@
     <!-- highlight -->
     <script src="vendor/highlight/highlight.pack.js"></script>
     <!-- fancybox -->
-    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- <script src="vendor/fancybox/jquery.fancybox.min.js"></script> -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox]', {
+        //
+      });
+    </script>
+
     <script>
       $('header').load('header.htm');
       $('aside').load('aside.htm');

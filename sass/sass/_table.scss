@@ -210,11 +210,12 @@ table {
     white-space: nowrap;
     border-left: none;
     border-right: none;
+    height: 2.6em;
     a {
       color: #fff;
       i {
         opacity: 1;
-        font-size: 0.8em;
+        font-size: 1em;
         filter: invert(100%);
         &:before {
           top: -0.2em;

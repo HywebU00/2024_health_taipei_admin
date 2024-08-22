@@ -1485,13 +1485,14 @@ table th {
   white-space: nowrap;
   border-left: none;
   border-right: none;
+  height: 2.6em;
 }
 table th a {
   color: #fff;
 }
 table th a i {
   opacity: 1;
-  font-size: 0.8em;
+  font-size: 1em;
   filter: invert(100%);
 }
 table th a i:before {

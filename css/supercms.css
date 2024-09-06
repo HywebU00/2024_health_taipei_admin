@@ -10870,8 +10870,11 @@ h2.title {
 }
 
 @media print {
-  body {
-    background: none;
+  @page {
+    size: A4;
+  }
+  @page :first {
+    margin-top: 2em;
   }
   /* -------------------------------不需要列印的區塊，請放置於這----//*/
   header,
@@ -10894,6 +10897,7 @@ h2.title {
     background: transparent;
     float: none;
     width: 100%;
+    print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
   .content {
@@ -10921,16 +10925,30 @@ h2.title {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  input[type=text], input[type=password], input[type=tel], input[type=mail], input[type=number], input[type=date], input[type=calendar], textarea, select {
+  input[type=text],
+  input[type=password],
+  input[type=tel],
+  input[type=mail],
+  input[type=number],
+  input[type=date],
+  input[type=calendar],
+  textarea,
+  select {
     border-bottom: 1px solid #999 !important;
     font-size: 14pt !important;
     border-radius: 0px !important;
     padding: 0.25em 0.75em;
   }
-  input[readonly], input[disabled] {
-    background: #F1F1F1 !important;
+  input[readonly],
+  input[disabled] {
+    background: #f1f1f1 !important;
   }
-  .labelEffect input:focus ~ label, .labelEffect input.used ~ label, .labelEffect textarea:focus ~ label, .labelEffect textarea.used ~ label, .labelEffect select:focus ~ label, .labelEffect select.used ~ label {
+  .labelEffect input:focus ~ label,
+  .labelEffect input.used ~ label,
+  .labelEffect textarea:focus ~ label,
+  .labelEffect textarea.used ~ label,
+  .labelEffect select:focus ~ label,
+  .labelEffect select.used ~ label {
     color: #333 !important;
     font-size: 10pt !important;
     height: calc(100% + 1.5em) !important;
@@ -10941,7 +10959,7 @@ h2.title {
     padding-right: 20px !important;
   }
   .help {
-    color: #AAA !important;
+    color: #aaa !important;
   }
   .flex-form .form_content.form_inline .labelEffect {
     align-self: flex-end !important;
@@ -10966,7 +10984,7 @@ h2.title {
   input[type=checkbox]:checked,
   input[type=radio]:checked {
     border: #333 solid 5px !important;
-    background-color: #FFF !important;
+    background-color: #fff !important;
     outline: none !important;
   }
   input[type=checkbox]:checked {
@@ -10983,4 +11001,16 @@ h2.title {
     -o-border-radius: 2px;
     border-radius: 2px;
   }
+}
+.break-after {
+  break-after: page;
+}
+
+.PDF {
+  position: relative;
+  height: 100vh;
+  page-break-inside: avoid; /* 若順著向下排列時會切開此元素，則直接換頁 */
+  page-break-after: always; /* 碰到此元素會直接換頁 */
+  break-inside: avoid;
+  break-after: page;
 }/*# sourceMappingURL=supercms.css.map */

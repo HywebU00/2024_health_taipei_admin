@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .container,
 .row {
   clear: both;
@@ -4168,13 +4169,15 @@ html {
 .PDF table tr td {
   border: 1px solid #666;
   border-bottom: 0;
-  padding: 0.05em 0.5em;
+  padding: 0 5px;
+  min-height: auto;
+  height: auto;
 }
 .PDF table tr th span,
 .PDF table tr td span {
   font-size: 85%;
   font-weight: normal;
-  padding-top: 0.25em;
+  padding-top: 0;
   display: inline-block;
   vertical-align: inherit;
 }

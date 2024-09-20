@@ -1519,6 +1519,7 @@ table.table_hover tr:nth-child(even) {
 }
 table.table_hover td {
   word-break: normal;
+  height: 4em;
 }
 table.table_sprite tr:nth-child(even) {
   background: #fafafa;
@@ -7237,6 +7238,7 @@ body.dark {
 .widget_block ._head .quick_btn .dropdown,
 .publish_block ._head .quick_btn .dropdown {
   width: auto;
+  margin: 0.25em;
 }
 .content_block ._head .quick_btn .control_panel,
 .widget_block ._head .quick_btn .control_panel,
@@ -7650,7 +7652,6 @@ table td .dropdown .dropdown-content .btn {
   padding: 0.25em !important;
   background: #eee;
   color: #333;
-  border: 1px solid #ddd !important;
   text-shadow: none;
 }
 table td .dropdown .dropdown-content .btn i {
@@ -7680,6 +7681,18 @@ table td .dropdown .dropdown-content .btn.btn-red:hover, table td .dropdown .dro
   background: red !important;
   border: 1px solid red !important;
 }
+table td .dropdown .dropdown-content .btn:disabled {
+  color: #999;
+  cursor: no-drop;
+}
+table td .dropdown .dropdown-content .btn:disabled:hover, table td .dropdown .dropdown-content .btn:disabled:focus {
+  color: #999;
+  background: #eee !important;
+  border: 1px solid #ddd !important;
+}
+table td .dropdown .dropdown-content .btn:disabled .i_download:before {
+  filter: invert(0.5);
+}
 
 .control_panel {
   margin: 0 0 0.1em;
@@ -7696,7 +7709,6 @@ table td .dropdown .dropdown-content .btn.btn-red:hover, table td .dropdown .dro
 }
 .control_panel .dropdown {
   width: 100%;
-  z-index: 9;
 }
 .control_panel .dropdown .btn {
   width: 100%;
@@ -10867,6 +10879,24 @@ h2.title {
   width: 1em;
   vertical-align: middle;
   margin-right: 0.5em;
+}
+
+.waiting {
+  margin: 1em 0 2em;
+  text-align: center;
+}
+.waiting img {
+  margin: 1em auto;
+  width: 50px;
+}
+.waiting p {
+  font-size: 1.25em;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  color: #c00;
+  letter-spacing: 3px;
 }
 
 @media print {

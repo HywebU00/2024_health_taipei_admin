@@ -285,3 +285,21 @@
     margin-right: 0.5em;
   }
 }
+.waiting {
+  margin: 1em 0 2em;
+  text-align: center;
+  img {
+    margin: 1em auto;
+    width: 50px;
+  }
+
+  p {
+    font-size: 1.25em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: #c00;
+    letter-spacing: 3px;
+  }
+}

@@ -97,11 +97,11 @@
     }
   }
   .stitle {
-    font-size: 1.125em;
+    font-size: 1em;
     margin: 0.3em 0;
   }
   .num {
-    font-size: 2em;
+    font-size: 1.2em;
     padding: 0.3em;
   }
 }
@@ -141,11 +141,11 @@
     }
   }
   .stitle {
-    font-size: 1.125em;
+    font-size: 1em;
     margin: 0.3em 0;
   }
   .num {
-    font-size: 2em;
+    font-size: 1.2em;
     padding: 0.3em;
   }
 }
@@ -153,10 +153,12 @@
 .stat-8-4 {
   .col {
     margin-bottom: 0;
+    padding-left: 4px;
+    padding-right: 4px;
   }
   .content_block {
-    margin: 0 auto 0.5em 0;
-    padding: 0.5em;
+    margin: 0 0 0.5em 0;
+    padding: 0.5em 0.2em;
     ._head h3 {
       border-bottom: none;
       margin: 0 0.5em;

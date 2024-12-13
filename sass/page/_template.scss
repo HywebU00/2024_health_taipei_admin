@@ -2458,7 +2458,7 @@ table {
     // flex: 2 2 300px;
     flex-grow: 2;
     flex-shrink: 2;
-    flex-basis: 66.6666%;
+    flex-basis: 56.6666%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2468,7 +2468,7 @@ table {
       // flex: 1 1 300px;
       flex-grow: 1;
       flex-shrink: 1;
-      flex-basis: 33.3333%;
+      flex-basis: 43.3333%;
     }
     @include screen('tablet') {
       // flex-grow: 0;

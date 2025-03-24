@@ -10505,6 +10505,7 @@ h2.title {
   margin-top: -1em;
   margin-bottom: 0.5em;
   margin-left: 1.5%;
+  display: flex;
 }
 @media screen and (max-width: 767px) {
   .login .btn_grp {
@@ -10514,13 +10515,15 @@ h2.title {
 }
 .login .btn_grp .btn {
   width: 100%;
-  margin: 0 auto;
+  margin: 0.2em;
   display: block;
   font-size: 1rem;
   background: #333a93;
   border: solid 1px #333a93;
   color: #fff;
   padding: 0.5em 0.2em;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
 }
 .login .btn_grp .btn:hover, .login .btn_grp .btn:focus {
   background: #262b6d;
@@ -10531,6 +10534,13 @@ h2.title {
 }
 .login .btn_grp .btn-primary:hover, .login .btn_grp .btn-primary:focus {
   background: #262b6d;
+}
+.login .btn_grp .btn-green {
+  background: #188286;
+  border: solid 1px #188286;
+}
+.login .btn_grp .btn-green:hover, .login .btn_grp .btn-green:focus {
+  background: #146d70;
 }
 .login .contact {
   color: #333;
@@ -10899,6 +10909,20 @@ h2.title {
   font-weight: bold;
   color: #c00;
   letter-spacing: 3px;
+}
+
+.int {
+  line-height: 1.8em;
+  margin: 1.5em 2.5em 1em;
+  padding: 2em;
+  border: solid 1px #ddd;
+  border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .int {
+    margin: 1em 2%;
+    padding: 1em;
+  }
 }
 
 @media print {
